@@ -13,7 +13,8 @@ const app = Vue.createApp({
             ],
             selectedVariant: 0,
             cart: 0,
-            onSale: true
+            onSale: true,
+            premuim: true
 
         }
     },
@@ -38,6 +39,12 @@ const app = Vue.createApp({
         inStock() {
             return this.variants[this.selectedVariant].quantity
         },
+        shipping() {
+            if (this.premuim) {
+                return 'Free'
+            }
+            return 30
+        }
 
     }
 
