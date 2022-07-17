@@ -14,7 +14,7 @@
     <div id="app">
         <div class="nav-bar"></div>
 
-        <div class="cart">Cart({{ cart }})</div>
+        <div class="cart">Cart({{ 'Green = '+ cart[0] +', '+ ' Blue = ' + cart[1] }})</div>
 
         <!-- <div class="product-display">
             <div class="product-container">
@@ -36,7 +36,7 @@
         </div>
     </div>
     </div> -->
-        <product-display :premium="premium"></product-display>
+        <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
     </div>
 
     <!-- Import Js -->
